@@ -45,13 +45,13 @@ botonMasFran.addEventListener('click', () => {
 });
 
 botonAgregarNico.addEventListener('click', () => {
-    dNico = dNico + parseInt(dolaresNico.value);
+    dNico = dNico + parseFloat(dolaresNico.value);
     dolaresNico.value = '';
     totalNico.innerHTML = 'Total: ' + dNico + ' USD';
 });
 
 botonAgregarFran.addEventListener('click', () => {
-    dFran = dFran + parseInt(dolaresFran.value);
+    dFran = dFran + parseFloat(dolaresFran.value);
     dolaresFran.value = '';
     totalFran.innerHTML = 'Total: ' + dFran + ' USD';
 });
