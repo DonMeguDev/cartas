@@ -45,13 +45,17 @@ botonMasFran.addEventListener('click', () => {
 });
 
 botonAgregarNico.addEventListener('click', () => {
-    dNico = dNico + parseFloat(dolaresNico.value);
+    if(dolaresNico.value > 0){
+        dNico = dNico + parseFloat(dolaresNico.value);
+        totalNico.innerHTML = 'Total: ' + dNico.toFixed(2) + ' USD';
+    }
     dolaresNico.value = '';
-    totalNico.innerHTML = 'Total: ' + dNico + ' USD';
 });
 
 botonAgregarFran.addEventListener('click', () => {
-    dFran = dFran + parseFloat(dolaresFran.value);
+    if(dolaresFran.value > 0){
+        dFran = dFran + parseFloat(dolaresFran.value);
+        totalFran.innerHTML = 'Total: ' + dFran.toFixed(2) + ' USD';
+    }
     dolaresFran.value = '';
-    totalFran.innerHTML = 'Total: ' + dFran + ' USD';
 });
